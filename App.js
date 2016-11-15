@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 /*class App extends React.Component {
     render() {
@@ -16,7 +17,7 @@ import React from 'react';
 //const App = () => <h1>Hello </h1>
 
 
-class App extends React.Component {
+/*class App extends React.Component {
     render() {
 //Los elementos en el return, deberan ir dentro de un parentesis,
 // cuando sean mas de uno, en caso contrario, ponerlos en la misma 
@@ -28,6 +29,23 @@ class App extends React.Component {
             </div>
         );      
     }
-}
+}*/
 
+class App extends React.Component {
+    render() {
+        let txt = this.props.txt
+        return <h1>{txt}</h1>
+    }
+}
+App.propTypes = {
+    txt: React.PropTypes.string,
+    cat: React.PropTypes.number.isRequired
+}
+App.defaultProps = {
+    txt: 'this is the default txt'
+}
+ReactDOM.render(
+    <App cat = {5} txt = "This is the props text"/>,
+    document.getElementById('app')
+);
 export default App
