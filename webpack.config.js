@@ -1,8 +1,8 @@
 module.exports = {
-	entry: './main.js',
-	outpu: {
-		path: './',
-		filename: 'index.js',
+	entry: "./main.js",
+	output: {
+		
+		filename: "index.js",
 	},
 	devServer: {
 		inline: true, 
@@ -13,7 +13,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				esclude: /node_modules/,
-				loader: 'babel',
+				loader: "babel",
 				query: {
 					presets: ['es2015', 'react']
 				}
